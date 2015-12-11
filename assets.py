@@ -1,14 +1,24 @@
-class GameModel():
+class GameModel(object):
 	def __init__(self, name):
-		pass
+		self.name = name
+	def GetName(self):
+		return self.name
+
 class User(GameModel):
-	def Score():
-		Score = 0
-	def Healing():
-		Healing = 0
+	def __init__(self, name, score=0, healing=0):
+		self.name = name
+		self.score = score
+		self.healing = healing
+
+	def Score(self):
+		return score
+	def Healing(self):
+		return healing
 
 class Computer(User):
-	pass
+	def __init__(self, name, score, healing):
+		pass
 
 class Player(User):
-	pass
+	def __init__(self, name, score, healing):
+		pass

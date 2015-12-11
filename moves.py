@@ -1,23 +1,36 @@
 from assets import GameModel
 
 class Pokemon(GameModel):
-	def Health():
-		pass
-	def Moves():
-		pass
+
+	def __init__(self, name, Health, Moves):
+		GameModel.__init__(self, name)
+		self.Health = Health
+		self.Moves = Moves
+
+	def Health(self):
+		return self.Health
+	def Moves(self):
+		return self.Moves
 
 class Moves():
-	def Name():
-		pass
 
-	def Damage():
-		pass
+	def __init__(self, Name, Damage, Range, Hitpoint):
+		self.Name = Name
+		self.Damage = Damage
+		self.Range = Range
+		self.Hitpoint = Hitpoint
 
-	def Range():
-		pass
+	def Name(self):
+		return self.Name
 
-	def Hitpoint():
-		pass
+	def Damage(self):
+		return self.Damage
+
+	def Range(self):
+		return self.Range
+
+	def Hitpoint(self):
+		return self.Hitpoint
 
 class Message():
 	def Notifications():

@@ -1,4 +1,4 @@
-from moves import *
+from move import *
 import random
 
 pokemon = Pokemon("Claire", 10, "Punch")

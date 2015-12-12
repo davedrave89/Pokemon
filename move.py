@@ -6,11 +6,11 @@ class Pokemon(GameModel):
 	def __init__(self, name, Health, Move):
 		GameModel.__init__(self, name)
 		self.Health = Health
-		self.Moves = Move
+		self.Move = Move
 
 	def Health(self):
 		return self.Health
-	def Moves(self):
+	def Move(self):
 		return self.Move
 
 class Move():

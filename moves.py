@@ -3,17 +3,17 @@ from assets import GameModel
 class Pokemon(GameModel):
 	"""Pokemon class represents pokemon which will be used by the Player/Computer to do battle"""
 
-	def __init__(self, name, Health, Moves):
+	def __init__(self, name, Health, Move):
 		GameModel.__init__(self, name)
 		self.Health = Health
-		self.Moves = Moves
+		self.Moves = Move
 
 	def Health(self):
 		return self.Health
 	def Moves(self):
-		return self.Moves
+		return self.Move
 
-class Moves():
+class Move():
 	"""Moves class represents the move, range damage etc that can be performed by a pokemon or player"""
 
 	def __init__(self, Name, Damage, Range, Hitpoint):

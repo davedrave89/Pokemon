@@ -14,9 +14,9 @@ class User(GameModel):
 		self.healing = healing
 
 	def Score(self):
-		return score
+		return self.score
 	def Healing(self):
-		return healing
+		return self.healing
 
 class Computer(User):
 	"""Computer class will be the opponent to the User"""

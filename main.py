@@ -14,7 +14,7 @@ user = User("Claire", 100, 1000)
 
 #Start Game
 
-while (user.healing > 0):
+while (user.Health > 0):
     result = raw_input("Please select move: \n1. Kick\n2. Punch\n")
     result = int(result) # parse string result to int
     result -= 1
@@ -24,7 +24,7 @@ while (user.healing > 0):
     print(pokemon.GetName())
     print(user.GetName())
     print(user.Score())
-    healing = user.Healing()
+    healing = user.Health()
     print "You have been hit: ", hit
 
     # Function that will calculate the score of player

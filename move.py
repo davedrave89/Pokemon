@@ -1,42 +1,57 @@
 from assets import GameModel
 
 class Pokemon(GameModel):
-	"""Pokemon class represents pokemon which will be used by the Player/Computer to do battle"""
+    """Pokemon class represents pokemon which will be used by the Player/Computer to do battle"""
 
-	def __init__(self, name, Health, Moves):
-		GameModel.__init__(self, name)
-		self.Health = Health
-		self.Moves = Moves
+    def __init__(self, name, health, moves):
+        self.health = health
+        self.moves = moves
+        GameModel.__init__(self, name)
 
-	def Health(self):
-		return self.Health
-	def Move(self):
-		return self.Move
+    @property
+    def health(self):
+        return self.__health
+
+    @health.setter
+    def health(self,health):
+        self.__health = health
+
+    @property
+    def moves(self):
+        return self.__moves
+
+    @moves.setter
+    def moves(self,moves):
+        self.__moves = moves
 
 class Move():
-	"""Moves class represents the move, range damage etc that can be performed by a pokemon or player"""
+    """Moves class represents the move, range damage etc that can be performed by a pokemon or player"""
 
-	def __init__(self, Name, Damage, Range, Hitpoint):
-		self.Name = Name
-		self.Damage = Damage
-		self.Range = Range
-		self.Hitpoint = Hitpoint
+    def __init__(self, name, damage, range, hitpoint):
+        self.name = name
+        self.damage = damage
+        self.range = range
+        self.hit_point = hitpoint
 
-	def Name(self):
-		return self.Name
+    @property
+    def name(self):
+		return self.__Name
 
-	def Damage(self):
+    @property
+    def Damage(self):
 		return self.Damage
 
-	def Range(self):
-		return self.Range
+    @property
+    def Range(self):
+        return self.Range
 
-	def Hitpoint(self):
-		return self.Hitpoint
+    @property
+    def Hitpoint(self):
+        return self.Hitpoint
 
 class Message():
-	def Notifications():
-		pass
+    def Notifications():
+        pass
 
-	def Health():
-		pass
+    def Health():
+        pass

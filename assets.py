@@ -13,18 +13,28 @@ class GameModel(object):
         self.__name = name
 
 class User(GameModel):
-	"""User class represents a game participant"""
-	def __init__(self, name, score=0, health=0):
-		self.name = name
-		self.score = score
+    """User class represents a game participant"""
+    def __init__(self, name, score=0, health=0):
+        self.name = name
+        self.score = score
         #health attribute will store the users health
-		self.health = health
+        self.health = health
 
-	def Score(self):
-		return self.score
+    @property
+    def score(self):
+        return self.__score
 
-	def Health(self):
-		return self.health
+    @score.setter
+    def score(self, score):
+        self.__score = score
+
+    @property
+    def health(self):
+		return self.__health
+
+    @health.setter
+    def health(self, health):
+        self.__health = health
 
 class Computer(User):
 	"""Computer class will be the opponent to the User"""

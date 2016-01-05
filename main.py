@@ -18,11 +18,11 @@ while (user.Health > 0):
     result = raw_input("Please select move: \n1. Kick\n2. Punch\n")
     result = int(result) # parse string result to int
     result -= 1
-    print(pokemon.Moves[result].Name) #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object
+    print(pokemon.name + " used " + pokemon.Moves[result].Name) #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object
     hit = random.randint(0,100)
 
-    print(pokemon.GetName())
-    print(user.GetName())
+    print(pokemon.name)
+
     print(user.Score())
     healing = user.Health()
     print "You have been hit: ", hit

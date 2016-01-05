@@ -1,10 +1,16 @@
 
 class GameModel(object):
-	"""GameModel class contains common methods and attributes that other classes share"""
-	def __init__(self, name):
-		self.name = name
-	def GetName(self):
-		return self.name
+    """GameModel class contains common methods and attributes that other classes share"""
+    def __init__(self, name):
+        self.name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
 
 class User(GameModel):
 	"""User class represents a game participant"""

@@ -15,7 +15,15 @@ user = User("Claire", 100, 1000)
 #Start Game
 
 while (user.health > 0):
-    result = raw_input("Please select move: \n1. Kick\n2. Punch\n")
+
+    print("Please select move:")
+
+    #loop through moves that the pokemon can do
+    #enumerate allows for the index to be included with the collection object
+    for index, move in enumerate(pokemon.moves):
+        print str(index + 1) + "." + move.name
+
+    result = raw_input()
     result = int(result) # parse string result to int
     result -= 1
     print(pokemon.name + " used " + pokemon.moves[result].name) #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object

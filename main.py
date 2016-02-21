@@ -23,17 +23,6 @@ def calculate_score(healing, score):
 #Start Game
 
 while (Player.health > 0):
-    result = raw_input("Please select move: \n1. Kick\n2. Punch\n")
-    result = int(result) # parse string result to int
-    result -= 1
-    print(clairePlayer.pokemon.name + " used " + clairePlayer.pokemon.moves[result].name) #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object
-    hit = random.randint(0,100)
-        
-    print calculate_score(clairePlayer.health, hit)
-
-    print(clairePlayer.score)
-    healing = clairePlayer.health
-    print "You have been hit: ", hit
 
     print("Please select move:")
 

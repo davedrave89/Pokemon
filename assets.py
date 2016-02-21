@@ -43,5 +43,10 @@ class Computer(User):
 
 class Player(User):
 	"""Player class will represent and be controlled by the user"""
-	def __init__(self, name, score, health):
-		pass
+	def __init__(self, name, score, health, pokemon):
+		self.name = name
+		self.score = score
+		self.health = health
+		# Allows for instatiation of Pokemon object
+		self.pokemon = pokemon
+		

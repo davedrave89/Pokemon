@@ -35,15 +35,20 @@ class Move():
 
     @property
     def name(self):
-		return self.__Name
+		return self.__name
 
     @property
     def Damage(self):
 		return self.Damage
 
+    #range specifies the lowest and highest amount of damage that a move can deal.
     @property
-    def Range(self):
-        return self.Range
+    def range(self):
+        return self.__range
+
+    @range.setter
+    def range(self, range):
+        self.__range = range
 
     @property
     def Hitpoint(self):

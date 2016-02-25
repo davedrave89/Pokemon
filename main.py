@@ -43,7 +43,7 @@ while (Player.health > 0):
     #damage dealt will be a random amount within the range specified by the move
     damage = random.randint(move_choice.range[0],move_choice.range[1])
 
-    print(clairePlayer.pokemon.name + " used " + move_choice.name + ", causing " + str(damage) + " damage.") #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object
+    print(clairePlayer.pokemon.name + " used " + move_choice.name + ", causing " + str(damage) + " damage.\n") #printing name within pokemon to show that an instantiation of the Move class has been passed into the pokemon object
 
     clairePlayer.health = clairePlayer.health - damage
 

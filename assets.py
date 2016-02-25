@@ -1,4 +1,3 @@
-
 class GameModel(object):
     """GameModel class contains common methods and attributes that other classes share"""
     def __init__(self, name):

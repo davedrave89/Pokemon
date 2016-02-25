@@ -47,6 +47,6 @@ while (Player.health > 0):
 
     clairePlayer.health = clairePlayer.health - damage
 
-    print(clairePlayer.name + "'s health is now " + str(clairePlayer.health))
+    print(clairePlayer.name + "'s health is now " + str(clairePlayer.health)+ "\n")
 
 print("Game Over")
